@@ -1,0 +1,65 @@
+<div class="dialog dialog--l" id="file-managment" lx-dialog>
+    <div class="toolbar bgc-red-500">
+        <div class="toolbar__left">
+            <i class="icon icon--l icon--white icon--flat mdi mdi--note-add"></i>
+        </div>
+
+        <strong class="toolbar__label tc-white">
+            <span ng-if="editingFile._id">Edit file</span>
+            <span ng-if="!editingFile._id">Add file</span>
+        </strong>
+    </div>
+
+    <lx-tabs links-tc="light" links-bgc="red-500" indicator="yellow-500" no-divider="true">
+        <lx-tab icon="insert-drive-file">
+            <div class="p pt0">
+                <lx-text-field label="Title" model="editingFile.title"></lx-text-field>
+                <lx-text-field label="Description" model="editingFile.description"></lx-text-field>
+            </div>
+        </lx-tab>
+
+        <lx-tab icon="people">
+            <div class="p pt0">
+                <lx-select selected="editingFile.users" placeholder="Select users" choices="users" multiple>
+                    <lx-select-selected>
+                        {{ $selected.name }} - {{ $selected.age }}
+                    </lx-select-selected>
+
+                    <lx-select-choices>
+                        {{ $choice.email }}
+                    </lx-select-choices>
+                </lx-select>
+            </div>
+        </lx-tab>
+
+        <lx-tab icon="list">
+            <ul class="list">
+                <li class="list-row list-row--has-separator">
+                    <div class="list-content-tile list-content-tile--two-lines">
+                        <strong>Lorem Ipsum</strong>
+                        <span>Lorem Ipsum</span>
+                    </div>
+                </li>
+
+                <li class="list-row list-row--has-separator">
+                    <div class="list-content-tile list-content-tile--two-lines">
+                        <strong>Lorem Ipsum</strong>
+                        <span>Lorem Ipsum</span>
+                    </div>
+                </li>
+
+                <li class="list-row list-row--has-separator">
+                    <div class="list-content-tile list-content-tile--two-lines">
+                        <strong>Lorem Ipsum</strong>
+                        <span>Lorem Ipsum</span>
+                    </div>
+                </li>
+            </ul>
+        </lx-tab>
+    </lx-tabs>
+
+    <div class="dialog__actions">
+        <button class="btn btn--m btn--black btn--flat" lx-ripple lx-dialog-close>Cancel</button>
+        <button class="btn btn--m btn--blue btn--flat" lx-ripple>Add file</button>
+    </div>
+</div>

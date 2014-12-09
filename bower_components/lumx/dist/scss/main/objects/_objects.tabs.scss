@@ -1,0 +1,85 @@
+///*------------------------------------*\
+//    #OBJECTS-TABS
+//\*------------------------------------*/
+
+// Tabs base styles
+.tabs {
+    position: relative;
+}
+    
+    // Tabs links
+    .tabs__links {
+        @extend %bare-list;
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+        text-align: center;
+
+        li {
+            display: table-cell;
+        }
+    }
+
+    .tabs__links--no-divider {
+        .tabs-link {
+            border-bottom: none !important;
+        }
+    }
+
+    // Tabs indicator
+    .tabs__indicator {
+        @include position(absolute, (($md-spacing-unit * 3) - 2) 0 null 0);
+        height: 2px;
+    }
+
+
+
+
+
+// Tabs link
+.tabs-link {
+    display: block;
+    height: $md-spacing-unit * 3;
+    cursor: pointer;
+    @include font-size(14px);
+    font-weight: 600;
+    line-height: $md-spacing-unit * 3;
+    text-align: center;
+    text-transform: uppercase;
+    @include transition-property(color);
+    @include transition-duration(0.2s);
+
+    .mdi {
+        @include font-size(24px);
+        line-height: $md-spacing-unit * 3;
+    }
+}
+
+
+
+
+
+// Tabs theme light
+.tabs--theme-light {
+    .tabs-link {
+        border-bottom: 1px solid $white-2;
+        color: $white-2;
+    }
+
+    .tabs-link:hover,
+    .tabs-link--is-active {
+        color: $white-1 !important;
+    }
+}
+
+
+
+
+
+// Tabs theme dark
+.tabs--theme-dark {
+    .tabs-link {
+        border-bottom: 1px solid $black-4;
+        color: $black-2;
+    }
+}

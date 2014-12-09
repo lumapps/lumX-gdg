@@ -1,0 +1,26 @@
+{
+  "name": "jquery.transit",
+  "repo": "rstacruz/jquery.transit",
+  "description": "Smooth CSS3 transitions and transformations for jQuery.",
+  "keywords": [
+    "css3",
+    "animation",
+    "transition"
+  ],
+  "dependencies": {
+    "jquery": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "main": "jquery.transit.js",
+  "homepage": "https://github.com/lumapps/jquery.transit",
+  "_release": "7bc2e025b6",
+  "_resolution": {
+    "type": "branch",
+    "branch": "feat/stop-transition",
+    "commit": "7bc2e025b69f646222ff4a22f55ea3b2b665c27f"
+  },
+  "_source": "https://github.com/lumapps/jquery.transit.git",
+  "_target": "feat/stop-transition",
+  "_originalSource": "https://github.com/lumapps/jquery.transit.git"
+}

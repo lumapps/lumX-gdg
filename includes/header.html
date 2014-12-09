@@ -1,0 +1,27 @@
+<header class="header bgc-red-500 tc-white z-depth1">
+    <div class="toolbar">
+        <div class="toolbar__left">
+            <button class="btn btn--l btn--white btn--icon" lx-ripple ng-click="Layout.toggleSidebar()">
+                <i class="mdi mdi--menu"></i>
+            </button>
+        </div>
+
+        <div class="toolbar__right">
+            <button class="btn btn--l btn--white btn--icon" lx-ripple ng-click="Layout.togglePanel()">
+                <i class="mdi mdi--info"></i>
+            </button>
+
+            <button class="btn btn--l btn--white btn--icon" lx-ripple>
+                <i class="mdi mdi--apps"></i>
+            </button>
+            
+            <lx-search-filter closed theme="light" model="data.filter"></lx-search-filter>
+        </div>
+    </div>
+
+    <h1 class="header__title fs-display1">My files</h1>
+
+    <button class="header__fab btn btn--xl btn--white btn--fab" lx-ripple ng-click="newFile()">
+        <i class="mdi mdi--add"></i>
+    </button>
+</header>

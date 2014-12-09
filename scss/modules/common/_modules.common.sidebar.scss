@@ -1,0 +1,141 @@
+///*------------------------------------*\
+//    #MODULES-COMMON-SIDEBAR
+//\*------------------------------------*/
+
+// Sidebar filter
+.sidebar-filter {
+    @include position(fixed, 0 0 0 0);
+    z-index: 998;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    pointer-events: none;
+    @include transition-property(opacity);
+    @include transition-duration(0.4s);
+    @include transition-timing-function($ease-out-quint);
+}
+
+.sidebar-filter--is-shown {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+
+
+
+// Sidebar base styles
+.sidebar {
+    @include position(fixed, 0 null 0 -255px);
+    z-index: 999;
+    width: 255px;
+    background-color: #fff;
+    @include transition-property(box-shadow, transform);
+    @include transition-duration(0.4s);
+    @include transition-timing-function($ease-out-quint);
+}
+
+.sidebar--is-opened {
+    box-shadow: 3px 0 6px rgba(0, 0, 0, 0.4);
+    @include transform(translateX(255px));
+}
+
+
+
+
+
+// Sidebar user
+.sidebar-user {
+    padding: $base-spacing-unit;
+    @include retina-image('../../images/header', 255px 145px);
+}
+    
+    // Sidebar user avatar
+    .sidebar-user__avatar {
+        display: block;
+        @include size($size-xl);
+        border-radius: 50%;
+    }
+
+    // Sidebar user email
+    .sidebar-user__email {
+        display: block;
+        position: relative;
+        margin-top: $base-spacing-unit;
+        @include font-size(14px);
+        font-weight: 600;
+        color: #fff;
+        line-height: 16px;
+        text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+
+        &:after {
+            @include mdi;
+            content: $mdi-var-arrow-drop-down;
+            @include position(absolute, 0 0 null null);
+            @include font-size(20px);
+            line-height: 16px;
+        }
+    }
+
+
+
+
+
+// Sidebar menu
+.sidebar-menu {
+    padding: halve($md-spacing-unit) 0;
+
+    ul {
+        @extend %bare-list;
+    }
+}
+
+
+
+
+
+// Sidebar link
+.sidebar-link {
+    display: block;
+    position: relative;
+    padding: 0 $base-spacing-unit;
+    cursor: pointer;
+
+    &:hover {
+        .sidebar-link__icon,
+        .sidebar-link__label {
+            color: $blue;
+        }
+    }
+}
+    
+    .sidebar-link__icon,
+    .sidebar-link__label {
+        display: block;
+        line-height: 48px;
+    }
+
+    // Sidebar icon
+    .sidebar-link__icon {
+        float: left;
+        width: 56px;
+        @include font-size(24px);
+        color: $grey-600;
+    }
+
+    // Sidebar label
+    .sidebar-link__label {
+        @include font-size(14px);
+        font-weight: 700;
+        color: $grey-900;
+    }
+
+
+
+
+
+// Sidebar separator
+.sidebar-separator {
+    height: 1px;
+    margin: halve($md-spacing-unit) 0;
+    background-color: #ddd;
+}

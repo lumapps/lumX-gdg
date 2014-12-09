@@ -1,0 +1,22 @@
+///*------------------------------------*\
+//    #MODULES-COMMON-HEADER
+//\*------------------------------------*/
+
+// Header
+.header {
+    position: relative;
+    z-index: 1;
+}
+
+    // Header title
+    .header__title {
+        margin: 0 0 0 104px;
+        line-height: 104px;
+    }
+
+    // Header fab
+    .header__fab {
+        position: absolute !important;
+        bottom: -28px;
+        left: $base-spacing-unit;
+    }

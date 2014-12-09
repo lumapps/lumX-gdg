@@ -1,0 +1,34 @@
+///*------------------------------------*\
+//    #MODULES-COMMON-MAIN
+//\*------------------------------------*/
+
+// Main container 
+.main {
+    @include position(fixed, 0 0 0 0);
+    z-index: 2;
+    box-shadow: 3px 0 6px rgba(0, 0, 0, 0.1);
+    @include transition-property(right);
+    @include transition-duration(0.4s);
+    @include transition-timing-function($ease-out-quint);
+}
+
+.main--is-small {
+    @include media-query(desk) {
+        right: 384px;
+    }
+}
+
+    // Main content
+    .main__content {
+        @include position(absolute, null 0 0 0);
+        z-index: 0;
+        overflow: auto;
+
+        @include media-query(portable) {
+            top: 160px;
+        }
+
+        @include media-query(desk) {
+            top: 168px;
+        }
+    }

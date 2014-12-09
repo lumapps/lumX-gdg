@@ -1,0 +1,82 @@
+///*------------------------------------*\
+//    #MODULES-COMMON-PANEL
+//\*------------------------------------*/
+
+// Panel
+.panel {
+    @include position(fixed, 0 null 0 null);
+    z-index: 1;
+    background: $white;
+    @include transform(translateX(0));
+    @include transition-property(transform);
+    @include transition-duration(0.4s);
+    @include transition-timing-function($ease-out-quint);
+
+    @include media-query(palm) {
+        width: 100%;
+        right: -100%;
+    }
+
+    @include media-query(lap-and-up) {
+        width: 384px;
+        right: -384px;
+    }
+}
+
+.panel--is-opened {
+    @include media-query(portable) {
+        z-index: 5;
+        box-shadow: -3px 0 6px rgba(0, 0, 0, 0.1);
+    }
+
+    @include media-query(palm) {
+        @include transform(translateX(-100%));
+    }
+
+    @include media-query(lap-and-up) {
+        @include transform(translateX(-384px));
+    }
+}
+
+
+
+
+
+// Panel header 
+.panel-header {
+
+}
+
+    // Panel header title
+    .panel-header__title {
+        padding: double($md-spacing-unit);
+
+        strong,
+        span {
+            display: block;
+            line-height: 20px;
+        }
+    }
+
+
+
+
+
+// Panel content
+.panel-content {
+    @include position(absolute, null 0 0 0);
+    overflow: auto;
+
+    @include media-query(portable) {
+        top: 160px;
+    }
+
+    @include media-query(desk) {
+        top: 168px;
+    }
+
+    img {
+        display: block;
+        max-width: 100%;
+    }
+}

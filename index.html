@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="gdg">
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+   <title>LumX</title>
+
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+   <link rel="stylesheet" href="/build/gdg.css">
+</head>
+
+<body ng-controller="AppController">
+    <!-- Sidebar -->
+    <ng-include src="'includes/sidebar.html'"></ng-include>
+
+    <!-- Main container -->
+    <div class="main" ng-class="{ 'main--is-small': Layout.panelIsOpened }">
+        <!-- Header -->
+        <ng-include src="'includes/header.html'"></ng-include>
+
+        <!-- File list -->
+        <ng-include src="'includes/files.html'"></ng-include>
+    </div>
+    <!-- /Main container -->
+
+    <!-- Panel -->
+    <ng-include src="'includes/panel.html'"></ng-include>
+
+    <!-- Dialog -->
+    <ng-include src="'includes/dialog.html'"></ng-include>
+
+    <!-- Libs -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/jquery.transit/jquery.transit.js"></script>
+    <script src="/bower_components/velocity/velocity.js"></script>
+    <script src="/bower_components/angular/angular.js"></script>
+
+    <!-- App -->
+    <script src="app.js"></script>
+
+    <!-- LumX -->
+    <script src="/bower_components/lumx/dist/js/lumx.js"></script>
+</body>
+</html>
