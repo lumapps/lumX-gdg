@@ -1,0 +1,15 @@
+<header class="header"><!-- Step 1: colors (bakcground: red-500, text-color: white) and z-depth helpers (http://ui.lumapps.com/css/colors)-->
+    <!-- Step 2: toolbar (http://ui.lumapps.com/css/toolbars)-->
+    <div class="toolbar">
+        <!-- Step 2.1 - Left area: menu button (click: Layout.toggleSidebar()) -->
+        <!-- Step 2.2 - Right area: info button (click: Layout.togglePanel()), apps button and search filter (model: data.filter - http://ui.lumapps.com/directives/search-filter) -->
+        <!-- (http://ui.lumapps.com/css/buttons / http://ui.lumapps.com/css/icons) -->
+    </div>
+
+    <!-- Step 3: font style helper (display1 - http://ui.lumapps.com/css/typography)-->
+    <h1 class="header__title">My files</h1>
+
+    <button class="header__fab btn btn--xl btn--white btn--fab" lx-ripple ng-click="newFile()">
+        <i class="mdi mdi--add"></i>
+    </button>
+</header>
