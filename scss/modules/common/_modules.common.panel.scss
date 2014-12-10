@@ -6,7 +6,6 @@
 .panel {
     @include position(fixed, 0 null 0 null);
     z-index: 1;
-    background: $white;
     @include transform(translateX(0));
     @include transition-property(transform);
     @include transition-duration(0.4s);

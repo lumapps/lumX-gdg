@@ -1,0 +1,79 @@
+<!-- Sidebar -->
+<div class="panel bgc-white" ng-class="{ 'panel--is-opened': Layout.panelIsOpened }">
+    <!-- Header -->
+    <header class="panel-header bgc-red-600 tc-white">
+        <div class="toolbar">
+            <div class="toolbar__left">
+                <button class="btn btn--l btn--white btn--icon" lx-ripple ng-click="Layout.closePanel()">
+                    <i class="mdi mdi--close"></i>
+                </button>
+            </div>
+
+            <div class="toolbar__right">
+                <button class="btn btn--l btn--white btn--icon" lx-ripple ng-click="editFile(selectedFile)">
+                    <i class="mdi mdi--edit"></i>
+                </button>
+
+                <button class="btn btn--l btn--white btn--icon" lx-ripple ng-click="deleteFile(selectedFile)">
+                    <i class="mdi mdi--delete"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="panel-header__title">
+            <strong class="fs-subhead">{{ selectedFile.title }}</strong>
+            <span class="fs-body1 tc-white-2">{{ selectedFile.updated }}</span>
+        </div>
+    </header>
+    <!-- /Header -->
+
+    <!-- Content -->
+    <div class="panel-content">
+        <img ng-src="{{ selectedFile.picture }}">
+
+        <ul class="list">
+            <li class="list-row list-row--has-secondary">
+                <div class="list-content-tile list-content-tile--one-line list-row--has-separator">
+                    <strong>Available offline</strong>
+                </div>
+
+                <div class="list-secondary-tile">
+                    <div class="switch">
+                        <input type="checkbox" id="switch1" class="switch__input" ng-model="selectedFile.isActive">
+                        <label for="switch1" class="switch__label">Switch</label>
+                    </div>
+                </div>
+            </li>
+
+            <li class="list-subheader">Who has access</li>
+
+            <li class="list-row list-row--has-primary">
+                <div class="list-primary-tile">
+                    <i class="icon icon--l icon--grey icon--circled mdi mdi--lock"></i>
+                </div>
+
+                <div class="list-content-tile list-content-tile--two-lines">
+                    <strong>Private</strong>
+                    <span>People listed can access</span>
+                </div>
+            </li>
+
+            <li class="list-divider"></li>
+
+            <li class="list-subheader">Users</li>
+
+            <li class="list-row list-row--has-primary list-row--has-separator" ng-repeat="user in selectedFile.users">
+                <div class="list-primary-tile">
+                    <div class="list-primary-tile__img" lx-thumbnail thumbnail-src="{{ user.picture }}" thumbnail-width="40" thumbnail-height="40"></div>
+                </div>
+
+                <div class="list-content-tile list-content-tile--two-lines">
+                    <strong>{{ user.name }}</strong>
+                    <span>{{ user.email }}</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- /Content -->
+</div>
+<!-- /Sidebar>
