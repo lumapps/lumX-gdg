@@ -1,5 +1,5 @@
 /*
- LumX v0.2.53
+ LumX v0.2.54
  (c) 2014-2015 LumApps http://ui.lumapps.com
  License: MIT
 */
@@ -986,8 +986,6 @@ angular.module('lumx.scrollbar', [])
 angular.module('lumx.thumbnail', [])
     .controller('LxThumbnailController', ['$scope', function($scope)
         {
-            var self = this;
-
             this.init = function(element)
             {
                 $scope.element = element;
@@ -1012,6 +1010,8 @@ angular.module('lumx.thumbnail', [])
                     $scope.originalHeight = img.height;
 
                     addImage();
+
+                    $scope.isLoading = false;
                 };
             };
 
@@ -1035,15 +1035,13 @@ angular.module('lumx.thumbnail', [])
                     'background-size': imageSizeWidth + 'px ' + imageSizeHeight + 'px',
                     'overflow': 'hidden'
                 });
-
-                $scope.isLoading = false;
             }
         }])
     .directive('lxThumbnail', function()
     {
         return {
             restrict: 'E',
-            template: '<div ng-class="{ \'thumbnail--is-loading\': isLoading }"></div>',
+            template: '<div class="thumbnail" ng-class="{ \'thumbnail--is-loading\': isLoading }"></div>',
             replace: true,
             controller: 'LxThumbnailController',
             scope: {
