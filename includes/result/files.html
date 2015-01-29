@@ -6,7 +6,7 @@
                     <th></th>
                     <th>Title</th>
                     <th>Owner</th>
-                    <th class="text--right">Last Modified</th>
+                    <th class="text-right">Last Modified</th>
                     <th></th>
                 </tr>
             </thead>
@@ -14,7 +14,7 @@
             <tbody>
                 <tr class="data-table__clickable-row" ng-repeat="file in files | filter:data.filter" ng-click="selectFile(file)">
                     <td>
-                        <div lx-thumbnail thumbnail-src="{{ file.picture }}" thumbnail-width="40" thumbnail-height="40"></div>
+                        <lx-thumbnail thumbnail-src="{{ file.picture }}" thumbnail-width="40" thumbnail-height="40"></lx-thumbnail>
                     </td>
                     <td>
                         <strong>{{ file.title }}</strong>
@@ -22,7 +22,7 @@
                     <td>
                         {{ file.owner.name }}
                     </td>
-                    <td class="text--right">
+                    <td class="text-right">
                         {{ file.updated }}
                     </td>
                     <td>

@@ -13,9 +13,9 @@
             </thead>
 
             <tbody>
-                <tr ng-repeat="file in files | filter:data.filter" ng-click="selectFile(file)">
+                <tr ng-repeat="file in files | filter:data.filter" ng-click="selectFile(file)"><!-- Step 4.4: clickable row-->
                     <td>
-                        <!-- Step 4.4: thumbnail (http://ui.lumapps.com/directives/thumbnails)-->
+                        <!-- Step 4.5: thumbnail (http://ui.lumapps.com/directives/thumbnails)-->
                         <img width="40" height="40" ng-src="{{ file.picture }}">
                     </td>
                     <td>
@@ -24,11 +24,11 @@
                     <td>
                         {{ file.owner.name }}
                     </td>
-                    <td><!-- Step 4.5: text align helper (right)-->
+                    <td><!-- Step 4.6: text align helper (right)-->
                         {{ file.updated }}
                     </td>
                     <td>
-                        <!-- Step 4.6: dropdown (http://ui.lumapps.com/directives/dropdowns)-->
+                        <!-- Step 4.7: dropdown (http://ui.lumapps.com/directives/dropdowns)-->
                         <button class="btn btn--m btn--black btn--icon" lx-ripple>
                             <i class="mdi mdi--more-vert"></i>
                         </button>

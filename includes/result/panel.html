@@ -1,7 +1,7 @@
 <!-- Sidebar -->
 <div class="panel bgc-white" ng-class="{ 'panel--is-opened': Layout.panelIsOpened }">
     <!-- Header -->
-    <header class="panel-header bgc-red-600 tc-white">
+    <header class="panel-header bgc-red-600">
         <div class="toolbar">
             <div class="toolbar__left">
                 <button class="btn btn--l btn--white btn--icon" lx-ripple ng-click="Layout.closePanel()">
@@ -21,7 +21,7 @@
         </div>
 
         <div class="panel-header__title">
-            <strong class="fs-subhead">{{ selectedFile.title }}</strong>
+            <strong class="fs-subhead tc-white-1">{{ selectedFile.title }}</strong>
             <span class="fs-body1 tc-white-2">{{ selectedFile.updated }}</span>
         </div>
     </header>
@@ -40,7 +40,7 @@
                 <div class="list-secondary-tile">
                     <div class="switch">
                         <input type="checkbox" id="switch1" class="switch__input" ng-model="selectedFile.isActive">
-                        <label for="switch1" class="switch__label">Switch</label>
+                        <label for="switch1" class="switch__label"></label>
                     </div>
                 </div>
             </li>
@@ -64,7 +64,7 @@
 
             <li class="list-row list-row--has-primary list-row--has-separator" ng-repeat="user in selectedFile.users">
                 <div class="list-primary-tile">
-                    <div class="list-primary-tile__img" lx-thumbnail thumbnail-src="{{ user.picture }}" thumbnail-width="40" thumbnail-height="40"></div>
+                    <lx-thumbnail class="list-primary-tile__img" thumbnail-src="{{ user.picture }}" thumbnail-width="40" thumbnail-height="40"></lx-thumbnail>
                 </div>
 
                 <div class="list-content-tile list-content-tile--two-lines">

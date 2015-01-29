@@ -48,7 +48,7 @@
 
     // Panel header title
     .panel-header__title {
-        padding: double($md-spacing-unit);
+        padding: $base-spacing-unit * 4;
 
         strong,
         span {

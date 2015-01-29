@@ -1,10 +1,10 @@
-<div class="dialog dialog--l" id="file-managment" lx-dialog>
+<lx-dialog class="dialog dialog--l" id="file-managment">
     <div class="toolbar bgc-red-500">
         <div class="toolbar__left">
             <i class="icon icon--l icon--white icon--flat mdi mdi--note-add"></i>
         </div>
 
-        <strong class="toolbar__label tc-white">
+        <strong class="toolbar__label tc-white fs-title ml">
             <span ng-if="editingFile._id">Edit file</span>
             <span ng-if="!editingFile._id">Add file</span>
         </strong>
@@ -12,6 +12,6 @@
 
     <!-- Step 6: tabs, text fields and selects-->
     <!-- Tabs: text color (light), background color (red-500), indicator (yellow 500), no divider (http://ui.lumapps.com/directives/tabs)-->
-    <!-- Text fields: title (moidel: editingFile.title), description (model: editingFile.description) (http://ui.lumapps.com/directives/text-fields) -->
-    <!-- Select: selected (editingFile.users), choices (users) (http://ui.lumapps.com/directives/selects) -->
-</div>
+    <!-- Text fields: title (model: editingFile.title), description (model: editingFile.description) (http://ui.lumapps.com/directives/text-fields) -->
+    <!-- Select: model (editingFile.users), choices (users) (http://ui.lumapps.com/directives/selects) -->
+</lx-dialog>
