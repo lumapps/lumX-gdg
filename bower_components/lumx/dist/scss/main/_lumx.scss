@@ -2,7 +2,7 @@
 //    #LUMX
 //\*------------------------------------*/
 
-@import "../../../../bourbon/dist/bourbon";
+@import "../../../../bourbon/app/assets/stylesheets/bourbon";
 @import "../../../../neat/app/assets/stylesheets/neat";
 
 @import "../core/core";
@@ -40,6 +40,7 @@
 @import "objects/objects.checkbox";
 @import "objects/objects.colors";
 @import "objects/objects.data-table";
+@import "objects/objects.date-picker";
 @import "objects/objects.dialog";
 @import "objects/objects.dropdown";
 @import "objects/objects.fab";
@@ -48,6 +49,7 @@
 @import "objects/objects.grid";
 @import "objects/objects.icon";
 @import "objects/objects.list";
+@import "objects/objects.media";
 @import "objects/objects.notification";
 @import "objects/objects.paragraph";
 @import "objects/objects.progress";

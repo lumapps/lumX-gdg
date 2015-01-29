@@ -7,7 +7,7 @@
     "Framework"
   ],
   "homepage": "ui.lumapps.com",
-  "version": "0.2.8",
+  "version": "0.2.53",
   "authors": [
     "LumApps"
   ],
@@ -40,23 +40,24 @@
     "release.py"
   ],
   "dependencies": {
-    "angular": "~1.3.3",
-    "jquery": "~2.1.1",
-    "velocity": "~1.1.0",
-    "neat": "~1.6.0",
-    "jquery.transit": "https://github.com/lumapps/jquery.transit.git#feat/stop-transition"
+    "angular": "~1.3.10",
+    "jquery": "~2.1.3",
+    "velocity": "~1.2.1",
+    "moment": "~2.9.0",
+    "neat": "~1.7.1"
   },
   "devDependencies": {
-    "angular-route": "~1.3.3",
-    "highlightjs": "~8.3.0"
+    "angular-route": "~1.3.10",
+    "highlightjs": "~8.4.0"
   },
-  "_release": "0.2.8",
+  "_release": "0.2.53",
   "_resolution": {
     "type": "version",
-    "tag": "v0.2.8",
-    "commit": "36a86f622ee4d6d132c8061661adbd6b6b4f32be"
+    "tag": "v0.2.53",
+    "commit": "5f4acd305ff55bb43ba05b341ee11ce97d5d01a4"
   },
   "_source": "git://github.com/lumapps/lumX.git",
-  "_target": "~0.2.3",
-  "_originalSource": "lumx"
+  "_target": "~0.2.53",
+  "_originalSource": "lumx",
+  "_direct": true
 }
